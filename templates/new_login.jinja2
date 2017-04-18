@@ -1,0 +1,18 @@
+{% extends "base.jinja2" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <form action="{{ url_for("index") }}" method="POST">
+
+    {% if error %}
+      <p style="color:red">{{ error }}</p>
+    {% endif %}
+    
+    <p>Username: <input type="text" name="username" /></p>
+    <p>Password: <input type="password" name="password" /></p>
+
+    <button type="Submit">Submit</button>
+      
+  </form> 
+{% endblock %}
